@@ -1,0 +1,43 @@
+<%
+const status = {
+  title: 'Add Page Title.',
+  description : 'Add Page Description.',
+  keywords: 'Add Page Keyword.',
+  ogpURL: 'Add OGP URL.',
+  ogpSitename: 'Add OGP Site Name.',
+  ogpTitle: 'Add OGP Title.',
+  ogpDescription: 'Add OGP Description.',
+  ogpImage: 'Add OGP Images File Path.',
+  cssFileName: 'app',
+  cssPlugins: false,
+  jsCoreFileName: 'core',
+  pages: 'primary'
+}
+%>
+<!DOCTYPE html>
+<html lang="ja">
+  <!-- Head -->
+  <head>
+    <% include components/common/_head %>
+    <% include components/common/_css %>
+  </head>
+  <!-- /Head -->
+  <body class="<%= status.pages %>">
+    <!-- Header -->
+    <% include components/common/_header %>
+    <!-- /Header -->
+    <!-- Main Contents -->
+    <main>
+      <!-- Heading -->
+      <% include components/pages/primary/_heading %>
+      <!-- /Heading -->
+    </main>
+    <!-- /Main Contents -->
+    <!-- Footer -->
+    <% include components/common/_footer %>
+    <!-- /Footer -->
+    <!-- JavaScript -->
+    <% include components/common/_js %>
+    <!-- /JavaScript -->
+  </body>
+</html>
