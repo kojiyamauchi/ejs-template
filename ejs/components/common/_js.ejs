@@ -1,4 +1,10 @@
+<% if (status.ecmaPolyfill) { %>
+  <script src="js/common.polyfill.bundle.min.js?rev" defer></script>
+<% } %>
+<% if (status.ecmaModules) { %>
+  <script src="js/common.modules.bundle.min.js?rev" defer></script>
+<% } %>
 <script src="js/global.min.js?rev" defer></script>
-<% if (!!status.jsCoreFileName) { %>
-<script src="js/<%= status.jsCoreFileName %>.min.js?rev" defer></script>
+<% if (!!status.ecmaCoreFile) { %>
+<script src="js/<%= status.ecmaCoreFile %>.min.js?rev" defer></script>
 <% } %>
