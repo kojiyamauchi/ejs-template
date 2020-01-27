@@ -1,5 +1,5 @@
 <%
-const status = {
+status = {
   title: 'Add Page Title.',
   description : 'Add Page Description.',
   ogpURL: 'Add OGP URL.',
@@ -19,26 +19,26 @@ const status = {
 <html lang="ja">
   <!-- Head -->
   <head>
-    <% include components/common/_head %>
-    <% include components/common/_css %>
+    <%- include ('components/common/_head') %>
+    <%- include ('components/common/_css') %>
   </head>
   <!-- /Head -->
   <body class="<%= status.pages %>">
     <!-- Header -->
-    <% include components/common/_header %>
+    <%- include ('components/common/_header') %>
     <!-- /Header -->
     <!-- Main Contents -->
     <main>
       <!-- Heading -->
-      <% include components/pages/primary/_heading %>
+      <%- include ('components/pages/primary/_heading') %>
       <!-- /Heading -->
     </main>
     <!-- /Main Contents -->
     <!-- Footer -->
-    <% include components/common/_footer %>
+    <%- include ('components/common/_footer') %>
     <!-- /Footer -->
     <!-- JavaScript -->
-    <% include components/common/_js %>
+    <%- include ('components/common/_js') %>
     <!-- /JavaScript -->
   </body>
 </html>
